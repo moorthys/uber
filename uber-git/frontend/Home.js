@@ -18,18 +18,22 @@ class Home extends Component {
         this.onEmailChange = this.onEmailChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
+    
 
     onFirstNameChange(e) {
         this.setState({ first_name: e.target.value });
     }
+    
 
     onLastNameChange(e) {
         this.setState({ last_name: e.target.value });
     }
+    
 
     onEmailChange(e) {
         this.setState({ email: e.target.value });
     }
+    
 
     handleClick() {
         axios.post('/api/user/add', {
